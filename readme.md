@@ -24,8 +24,8 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Repositório](https://github.com/Kelf1729/Front_Mentor_statspreviw.git)
+- Live Site URL: [Hospedagem](https://kelf1729.github.io/Front_Mentor_statspreviw/)
 
 ## My process
 
@@ -39,5 +39,4 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@Kelf1729]
