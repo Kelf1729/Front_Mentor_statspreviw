@@ -20,7 +20,7 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./design/desktop-design.jpg)
 
 ### Links
 
