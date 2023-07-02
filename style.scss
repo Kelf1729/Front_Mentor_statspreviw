@@ -1,0 +1,128 @@
+// Reset
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 15px;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+// Colors
+$primary-color0: hsl(233, 47%, 7%);
+$primary-color1: hsl(244, 38%, 16%);
+$primary-color2: hsl(277, 64%, 61%);
+
+$neutral-color0: hsl(0, 0%, 100%);
+$neutral-color1: hsla(0, 0%, 100%, 0.75);
+$neutral-color2: hsla(0, 0%, 100%, 0.6);
+// Device
+$m-device: 376px;
+@mixin d($size) {
+  @if $size == m {
+    @media screen and (max-width: $m-device) {
+      @content;
+    }
+  }
+}
+// Site
+body {
+  background-color: $primary-color0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include d(m) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 500px));
+  @include d(m) {
+    grid-template-columns: 350px;
+  }
+  .conteudo {
+    background-color: $primary-color1;
+    padding: 40px;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    @include d(m) {
+      border-radius: 0px 0px 10px 10px;
+    }
+    h1,
+    span:first-child {
+      color: $neutral-color0;
+      font-family: "Inter";
+      font-weight: 700;
+      font-size: 2rem;
+      @include d(m) {
+        margin-bottom: 20px;
+      }
+    }
+    span:first-child {
+      color: $primary-color2;
+    }
+    p {
+      font-family: "Inter";
+      color: $neutral-color1;
+      line-height: 1.5;
+      @include d(m) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+.icones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-right: 20px;
+  @include d(m) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0px;
+  }
+  h2 {
+    color: $neutral-color0;
+    font-family: "Lexend Deca";
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    @include d(m) {
+      text-align: center;
+    }
+  }
+  span {
+    font-family: "Lexend Deca";
+    color: $neutral-color1;
+    text-transform: uppercase;
+  }
+}
+img {
+  border-radius: 0px 10px 10px 0px;
+  @include d(m) {
+    border-radius: 10px 10px 0px 0px;
+  }
+}
+.container_img {
+  position: relative;
+  @include d(m) {
+    grid-row: 1/2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color2;
+    opacity: 0.75;
+    border-radius: 0px 10px 10px 0px;
+    z-index: 1;
+  }
+}
